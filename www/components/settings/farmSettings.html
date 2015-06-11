@@ -1,0 +1,45 @@
+<div class="set2-wrapper">
+    <div class="set2-container">
+        <!--<form name="set" method="post" action="/~xmatchge/client/settings3.php" user_id="Avi">-->
+        <div>
+            <label class="set-title set4">FARM</label>
+            <li class="checkbox-lable">Name<input type="text" id="set4_inputname" name="name" value="Avraham  Cohen " required="" pattern="[A-Za-z0-9]{1,}" disabled="">
+            </li>
+            <li class="checkbox-lable">Number<input type="number" id="set4_inputnumber" name="number" value="1" required="" disabled="">
+            </li>
+            <li class="checkbox-lable">Location<input type="text" id="set4_inputLoc" name="name" value="" required="" disabled="">
+            </li>
+            <li class="checkbox-lable">Email<input type="email" id="set4_inputemail" name="email" value="mshira@cambium.co.il" required="">
+            </li>
+        </div>
+        <label class="set-title set4"> INSEMINATION UPDATE</label>
+        <li class="checkbox-lable">Last Insemination Update<input type="date" id="set4_inputlast" name="lastinsemupdate" value="0000-00-00">
+        </li>
+        <li class="checkbox-lable"><span>Days Before Update Warning</span>
+            <input type="number" id="set4_inputdays" name="daybefupdate" required="" min="1" max="31" value="4" style="width: 50px;">
+        </li>
+        <li>
+            <input type="checkbox" id="day1" name="dayinsemupdate"><label for="day1"><span></span>Manual Insemination Update</label>
+        </li>
+        <li>
+            <input type="checkbox" id="day2" name="excfileinsem" checked=""><label for="day2"><span></span>Excel File Insemination Update</label>
+        </li>
+        <li>
+            <input type="checkbox" id="day3" name="showinsem" checked=""><label style="width: auto" for="day3"><span></span>Show Insemination Summary on the List </label>
+        </li>
+                    <!--<label class="set-title set4">DATABASE</label>
+                            <li>
+                        Location    <input type="text" id="set4_locationtxt" name="folder" placeholder="c:\Program Files\drorbreeding" required="" pattern="[A-Za-z0-9]{1,}" disabled="">
+                            </li>
+                            <li>
+                        Backup Location    <input type="text" id="set4_backuplocationtxt" name="folderback" placeholder="c:\Program Files\drorbreeding" required="">
+                                <button class="button-upload location">
+                                    <div class="dots-in-upload">...</div>
+                                    <input type="file" value="" class="uploadBtn-setting-input upload" onchange="uploadFileFun(this.value)">
+                                </button>
+            
+                            </li>-->
+        <button class="btn-save">Save</button>
+        <!--</form>-->
+    </div>
+</div>

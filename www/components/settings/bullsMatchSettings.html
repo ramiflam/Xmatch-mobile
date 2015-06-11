@@ -1,0 +1,88 @@
+<div class="set2-wrapper">
+    <div class="set2-container">
+        <table>
+            <tbody>
+            <tr>
+                <th>Young Bulls</th>
+                <td>
+                    <div class="slider-data-wrapper"><span class="sliderVal" id="valBox1">{{Math.round(100*valBox11/total)}}%</span>
+                    <span class="sliderVal2" id="valBox11" >({{valBox11}})</span></div>
+                    <input type="range" id="slider1" value="2" name="Bulls_usage_young_bulls" min="0" max={{total}} data-ng-model="valBox11">
+                </td>
+            </tr>
+            <tr>
+                <th>Beaf Bulls</th>
+                <td>
+                    <div class="slider-data-wrapper"><span class="sliderVal" id="valBox2">{{Math.round(100*valBox21/total)}}%</span>
+                    <span class="sliderVal2" id="valBox21">({{valBox21}})</span></div>
+                    <input type="range" id="slider2" value="1" name="Bulls_usage_meat_bulls" min="0" max={{total}} data-ng-model="valBox21">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Proven Bulls</th>
+                <td>
+                    <div class="slider-data-wrapper"><span class="sliderVal" id="valBox4">{{Math.round(100*(total-valBox11-valBox21)/total)}}%</span>
+                    <span class="sliderVal2" id="valBox41">({{total-valBox11-valBox21}})</span></div>
+                    <input type="range" id="slider3" disabled value="{{total-valBox11-valBox21}}" name="" min="0" max={{total}} >
+                </td>
+            </tr>
+            <tr>
+                <th>Lactation (For Beaf Bulls)</th>
+                <td>
+                    <select name="Meat_bulls_lactation_no">
+                        <option value="1">1</option>
+                        <option value="2" selected="">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Upside Down</th>
+                <td>
+                    <select onchange="if(this.value!='10%') document.getElementById('tooltip').style.display = 'block'; else document.getElementById('tooltip').style.display = 'none';">
+                        <option value="5%">5%</option>
+                        <option value="10%" selected="">10%</option>
+                        <option value="15%">15%</option>
+                        <option value="20%">20%</option>
+                        <option value="25%">25%</option>
+                        <option value="30%">30%</option>
+                        <option value="35%">35%</option>
+                        <option value="40%">40%</option>
+                        <option value="45%">45%</option>
+                        <option value="50%">50%</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Bull Table First Insemination</th>
+                <td>
+                    <input type="date" name="Bulls_first_insemination_date" required="" value="2015-03-28">
+                </td>
+            </tr>
+            <tr>
+                <th>Bull Table Last Insemination</th>
+                <td>
+                    <input type="date" name="Bulls_last_insemination_date" value="2015-03-26" required="">
+                </td>
+            </tr>
+            <tr>
+                <th>Bulls Forbidden for Insemination</th>
+                <td>
+                    <input type="text" name="name" placeholder="Raffaello" required="">
+                </td>
+            </tr>
+    </tbody>
+        </table>
+        <button class="btn-save">Save</button>
+    </div>
+    
+</div>

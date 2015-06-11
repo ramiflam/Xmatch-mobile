@@ -1,0 +1,17 @@
+<nav id="navbar-container" class="menu push-menu-left">
+    <div class="navbar-title">{{username}}, {{farmName}} Farm</div>
+    <ul class="navbar-main">
+        <li class="field nav" id="daily" data-ng-click="dailyClicked=!dailyClicked"  ng-class="dailyClicked ?'up':''"><span>Daily Activity</span></li>
+        <li class="field" id="ins" data-ng-click="moveTo('inseminationList')" data-ng-show="dailyClicked"><span>Create Insemination list</span></li>
+        <li class="field" id="manual" data-ng-click="moveTo('manual')" data-ng-show="dailyClicked"><span>Manual update of insemination</span></li>
+        <li class="field nav" id="cows" data-ng-click="cowsClicked=!cowsClicked" ng-class="cowsClicked ?'up':''"><span>Cows</span></li>
+        <li class="field" id="update" data-ng-click="moveTo('cows')" data-ng-show="cowsClicked"><span>Update cows</span></li>
+        <li class="field" id="future" data-ng-click="moveTo('futureInseminationList')" data-ng-show="cowsClicked"><span>Create future insemination list</span></li>
+        <li class="field nav" id="bulls" data-ng-click="moveTo('bulls')"><span>Bulls</span></li>
+        <li class="field nav" id="settings" data-ng-click="settingsClicked=!settingsClicked"  ng-class="settingsClicked ?'up':''"><span>Settings</span></li>
+        <li class="field" id="genetic" data-ng-click="moveTo('geneticPlan')" data-ng-show="settingsClicked"><span>Active genetic plan</span></li>
+        <li class="field" id="prefered" data-ng-click="moveTo('PreferedCharacteristics')" data-ng-show="settingsClicked"><span>Prefered characteristics</span></li>
+        <li class="field" id="prefered" data-ng-click="moveTo('bullsMatchSettings')" data-ng-show="settingsClicked"><span>General bulls matching settings</span></li>
+        <li class="field" id="prefered" data-ng-click="moveTo('farmSettings')" data-ng-show="settingsClicked"><span>General farm settings</span></li>
+    </ul>
+</nav>

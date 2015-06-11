@@ -1,0 +1,47 @@
+<header class="navbar navbar-app navbar-absolute-top" data-ng-controller="headerCtrl">
+    <!--<ng-include src="'components/header/sidebar.html'"></ng-include>-->
+    <div class="info-popup">
+        <section data-ng-hide="$state.includes('login')" class="header">
+            <div id="navbar-btn" class="nav-toggler toggle-push-left" data-ng-click="openSideBar()" data-ng-hide="$state.includes('farms')" ></div>
+            <div class="header-image" data-ng-click="returnToMain()"></div>
+        </section>
+        <section data-ng-hide="$state.includes('login')">
+            <div class="subtitle">{{subHeaderText}}
+                <div ng-show="searchIconClicked"  class="open-search-container">
+                    <div class="search icon" data-ng-click="searchIconClicked=false"></div>
+                    <input type="text" class="open-search" placeholder="Bull Number" data-ng-model="search">
+                    <button class="btn-search" data-ng-click="find()">Find</button>
+                </div>
+                <div class="search" ng-show="showSearchAndFiter" data-ng-click="searchIconClicked=true;filterIconClicked = false"></div>
+                <!--<h1 id="subHeaderText">{{subHeaderText}}</h1>-->
+                <div id="filter" class="filter" ng-show="showSearchAndFiter" data-ng-click="filterIconClicked = !filterIconClicked;searchIconClicked=false;$event.stopPropagation();" ng-class="overed==2 ? 'filter2':''"></div>
+                <ul ng-show="filterIconClicked"  class="filter-container">
+                    <li class="filter-opt" ng-mouseover="overed=1" ng-class="overed==1 ?'overed':''" data-ng-click="filter('')">All</li>
+                    <li class="filter-opt" ng-mouseover="overed=2" ng-class="overed==2 ?'overed':''" data-ng-click="filter('YES')">Avaliable For Matching</li>
+                    </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="btn btn-group pull-left" data-ng-hide="backIcon()" data-ng-click="toggleMenu($event);closePopups();$event.stopPropagation();">
+        <div class="btn btn-navbar sidebar-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+            <!--<nav id="navbar-container" class="menu push-menu-left" data-ng-show="isOpenSideBar">
+            <div class="navbar-title">Moshe klayn, kLKlayn Farm</div>
+            <ul class="navbar-main">
+                <li class="field nav" id="daily"><span>Daily Activity</span></li>
+                <li class="field" id="ins"><span>Create Insemination list</span></li>
+                <li class="field" id="manual"><span>Manual update of insemination</span></li>
+                <li class="field nav" id="cows"><span>Cows</span></li>
+                <li class="field" id="update"><span>Update cows</span></li>
+                <li class="field" id="future"><span>Create future insemination list</span></li>
+                <li class="field nav" id="bulls"><span>Bulls</span></li>
+                <li class="field nav" id="settings"><span>Settings</span></li>
+                <li class="field" id="genetic"><span>Active genetic plan</span></li>
+                <li class="field" id="prefered"><span>Prefered characteristics</span></li>
+            </ul>
+        </nav>-->
+    <sidebar data-ng-show="isOpenSideBar"></sidebar>
+</header>

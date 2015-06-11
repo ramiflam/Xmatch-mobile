@@ -1,0 +1,18 @@
+<div class="set1-wrapper">
+    <div class="set1-container">
+        <h2 class="set-description">Active Crossbreeding Genetic Program</h2>
+
+        <select id="mySelect" class="select-plan" data-ng-model="chosen">
+            <option value="2+Extra">Twoplus</option>
+            <option value="2+" selected="">Twoplus Extra Fitness</option>
+            <option value="">Pure Holstein</option>
+        </select>
+
+        <div data-ng-show="chosen == '2+Extra'" class="img-plan1"></div>
+        <div data-ng-show="chosen == '2+'" class="img-plan2"></div>
+
+        <button class="btn-save">Save</button>
+    </div>
+</div>
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="xmatchApp" class="ng-scope">
+    <head>
+        <meta charset="utf-8" />
+        <!--<meta name="viewport" content="initial-scale=1, minimum-scale=1,maximum-scale=1, user-scalable=0, height=device-height, width=device-width" />-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Xmate</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="cowsApp.css">
+        <script src="cordova.js"></script>
+    </head>
+    <body >
+
+                <div class="container">
+
+
+                    <ng-include src="'components/header/header.html'"></ng-include>
+                    <ng-include src="'components/footer/footer.html'"></ng-include>
+                    <div id="main-view" class="main-view" data-ui-view="main"></div>
+                    
+                </div>
+
+
+        <!-- Jquery -->
+        <script src="js/jquery-1.8.3.min.js"></script>
+
+        <!-- Angular -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-ui-router.min.js"></script>
+
+        <script src="app.js"></script>
+
+        <!-- Xmatch  components-->
+        <script src="components/login/login.js"></script>
+        <script src="components/farms/farms.js"></script>
+        <script src="components/bulls/bulls.js"></script>
+        <!--<script src="components/header/sidebar.js"></script>-->
+        <script src="components/header/header.js"></script>
+        <script src="components/main/main.js"></script>
+        <script src="components/settings/geneticPlan.js"></script>
+        <script src="components/settings/PreferedCharacteristics.js"></script>
+        <script src="components/settings/bullsMatchSettings.js"></script>
+        <script src="components/settings/farmSettings.js"></script>
+        <script src="components/dailyActivity/inseminationList.js"></script>
+        <script src="components/cows/futureInseminationList.js"></script>
+        <script src="components/cows/details.js"></script>
+        <script src="components/footer/footer.js"></script>
+    </body>
+</html>

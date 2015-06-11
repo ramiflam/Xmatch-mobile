@@ -1,0 +1,184 @@
+<div class="bulls-container">
+    <div data-ng-repeat="bull in bulls | filter:searchText">
+        <div class="bulls-box-data">
+            <div class="bulls-image" ng-click="enterInfo(bull.num)"></div>
+            <div class="bulls-info">
+                <div class="box-top">
+                    <div class="box-top-left">
+                        <div class="bull-name">{{bull.name}}</div>
+                        <div class="bull-id">#{{bull.num}}</div>
+                        <div class="bull-type">Type: cross</div>
+
+                    </div>
+                    <div class="box-top-right">
+                        <div class="bull-check">
+                            <input type="checkbox" id="{{bull.num}}" name="bull-update1" /><label for="{{bull.num}}"><span></span></label>
+                        </div>
+                        <div class="bull-match">For matching: {{bull.active}}</div>
+                    </div>
+                </div>
+                <div class="box-bottom">
+                    <div class="bull-ins">Actual Insemination: 6</div>
+                    <div class="bull-spread" data-ng-click="showMoreDetails=!showMoreDetails" ng-class="showMoreDetails ?'clicked up':''"></div>
+                </div>
+            </div>
+        </div>
+        <div class="more-details" data-ng-show="showMoreDetails">
+                        CVN:0 <br>
+                        ALLADD(KG):45 <br>
+                        Carts: only <br>
+                        Restric: Yes <br>
+                        Restric from: 4 <br>
+                        Restric to: 4 <br>
+                        Usage priority: 1 <br>
+                        Planned usage (%): 80 <br>
+                        Actual usage :60
+        </div>
+    </div>
+    <!--<div>
+        <div class="bulls-box-data">
+            <div class="bulls-image" data-ng-click="enterInfo(4581)"></div>
+            <div class="bulls-info">
+                <div class="box-top">
+                    <div class="box-top-left">
+                        <div class="bull-name">Refalo</div>
+                        <div class="bull-id">#4581</div>
+                        <div class="bull-type">Type: cross</div>
+                    </div>
+                    <div class="box-top-right">
+                        <div class="bull-check">
+                            <input type="checkbox" id="bull-update2" name="bull-update2" /><label for="bull-update2"><span></span></label>
+                        </div>
+                        <div class="bull-match">For matching: YES</div>
+                    </div>
+                </div>
+                <div class="box-bottom">
+                    <div class="bull-ins">Actual Insemination: 6</div>
+                    <div class="bull-spread" data-ng-click="showMoreDetails=!showMoreDetails"></div>
+                </div>
+            </div>
+        </div>
+        <div class="more-details" data-ng-show="showMoreDetails">
+                        CVN:0 <br>
+                        ALLADD(KG):45 <br>
+                        Carts: only <br>
+                        Restric: Yes <br>
+                        Restric from: 4 <br>
+                        Restric to: 4 <br>
+                        Usage priority: 1 <br>
+                        Planned usage (%): 80 <br>
+                        Actual usage :60
+        </div>
+    </div>
+    <div class="bulls-box-data">
+        <div class="bulls-image" ng-click="enterInfo(4582)"></div>
+        <div class="bulls-info">
+            <div class="box-top">
+                <div class="box-top-left">
+                    <div class="bull-name">Refalo</div>
+                    <div class="bull-id">#4582</div>
+                    <div class="bull-type">Type: cross</div>
+                </div>
+                <div class="box-top-right">
+                    <div class="bull-check">
+                        <input type="checkbox" id="bull-update3" name="bull-update3" /><label for="bull-update3"><span></span></label>
+                    </div>
+                    <div class="bull-match">For matching: YES</div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="bull-ins">Actual Insemination: 6</div>
+                <div class="bull-spread"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bulls-box-data">
+        <div class="bulls-image" ng-click="enterInfo(4583)"></div>
+        <div class="bulls-info">
+            <div class="box-top">
+                <div class="box-top-left">
+                    <div class="bull-name">Refalo</div>
+                    <div class="bull-id">#4583</div>
+                    <div class="bull-type">Type: cross</div>
+                </div>
+                <div class="box-top-right">
+                    <div class="bull-check">
+                        <input type="checkbox" id="bull-update4" name="bull-update4" /><label for="bull-update4"><span></span></label>
+                    </div>
+                    <div class="bull-match">For matching: YES</div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="bull-ins">Actual Insemination: 6</div>
+                <div class="bull-spread"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bulls-box-data">
+        <div class="bulls-image" ng-click="enterInfo(4584)"></div>
+        <div class="bulls-info">
+            <div class="box-top">
+                <div class="box-top-left">
+                    <div class="bull-name">Refalo</div>
+                    <div class="bull-id">#4584</div>
+                    <div class="bull-type">Type: cross</div>
+                </div>
+                <div class="box-top-right">
+                    <div class="bull-check">
+                        <input type="checkbox" id="bull-update5" name="bull-update5" /><label for="bull-update5"><span></span></label>
+                    </div>
+                    <div class="bull-match">For matching: YES</div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="bull-ins">Actual Insemination: 6</div>
+                <div class="bull-spread"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bulls-box-data">
+        <div class="bulls-image" ng-click="enterInfo(4585)"></div>
+        <div class="bulls-info">
+            <div class="box-top">
+                <div class="box-top-left">
+                    <div class="bull-name">Refalo</div>
+                    <div class="bull-id">#4585</div>
+                    <div class="bull-type">Type: cross</div>
+                </div>
+                <div class="box-top-right">
+                    <div class="bull-check">
+                        <input type="checkbox" id="bull-update6" name="bull-update6" /><label for="bull-update6"><span></span></label>
+                    </div>
+                    <div class="bull-match">For matching: YES</div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="bull-ins">Actual Insemination: 6</div>
+                <div class="bull-spread"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bulls-box-data">
+        <div class="bulls-image" ng-click="enterInfo(4586)"></div>
+        <div class="bulls-info">
+            <div class="box-top">
+                <div class="box-top-left">
+                    <div class="bull-name">Refalo</div>
+                    <div class="bull-id">#4586</div>
+                    <div class="bull-type">Type: cross</div>
+                </div>
+                <div class="box-top-right">
+                    <div class="bull-check">
+                        <input type="checkbox" id="bull-update7" name="bull-update7" /><label for="bull-update7"><span></span></label>
+                    </div>
+                    <div class="bull-match">For matching: YES</div>
+                </div>
+            </div>
+            <div class="box-bottom">
+                <div class="bull-ins">Actual Insemination: 6</div>
+                <div class="bull-spread"></div>
+            </div>
+        </div>
+    </div>-->
+
+</div>

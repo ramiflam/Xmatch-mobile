@@ -1,0 +1,49 @@
+<div class="set1-conrainer">
+    <div class="border">
+        <div id="tag-wrapper-cows"></div>
+        <input class="ins-list" type="text" id="txtcownum" name="txtcownum" placeholder="Write out cow SA number for insemination" required pattern="[0-9][0-9 ]" ng-keypress="validate($event); searchKeyPress($event)" ng-keydown="searchKeyPress($event)"/>
+    </div>
+
+    <button class="btn-save create" type="button" id="create" data-ng-click="createInseminationList()">Create Insemination List</button>
+
+    <div class="bulls-container">
+        <div data-ng-repeat="cow in cows | selectedCows:chosenCows">
+            <div class="bulls-box-data">
+                <div class="bulls-image" ng-click="enterInfo(cow.num)"></div>
+                <div class="bulls-info">
+                    <div class="box-top">
+                        <div class="box-top-left">
+                            <div class="bull-name">{{cow.name}}</div>
+                            <div class="bull-id">#{{cow.num}}</div>
+                            <div class="bull-type">Type: cross</div>
+
+                        </div>
+                        <div class="box-top-right">
+                            <div class="bull-check">
+                                <input type="checkbox" id="{{cow.num}}" name="bull-update1" /><label for="{{cow.num}}"><span></span></label>
+                            </div>
+                            <div class="bull-match">Bull1: {{cow.bulls[0]}}</div>
+                            <div data-ng-show="'{{cow.bulls[1]}}'!=''">Bull2: {{cow.bulls[1]}}</div>
+                            <div data-ng-show="'{{cow.bulls[2]}}'!=''">Bull3: {{cow.bulls[2]}}</div>
+                        </div>
+                    </div>
+                    <div class="box-bottom">
+                        <div class="bull-ins">Actual Insemination: 6</div>
+                        <div class="bull-spread" data-ng-click="showMoreDetails=!showMoreDetails" ng-class="showMoreDetails ?'clicked up':''"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-details" data-ng-show="showMoreDetails">
+                        CVN:0 <br>
+                        ALLADD(KG):45 <br>
+                        Carts: only <br>
+                        Restric: Yes <br>
+                        Restric from: 4 <br>
+                        Restric to: 4 <br>
+                        Usage priority: 1 <br>
+                        Planned usage (%): 80 <br>
+                        Actual usage :60
+            </div>
+        </div>
+    </div>
+</div>

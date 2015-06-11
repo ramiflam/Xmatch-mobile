@@ -1,0 +1,16 @@
+<div data-ng-controller="footer">
+    <div class="footer" data-ng-show="$state.includes('bulls') || $state.includes('cows') || $state.includes('inseminationList')">
+        <div class="buttons">
+            <div class="button" data-ng-show="$state.includes('inseminationList')" data-ng-click="clear()">CLEAR</div>
+            <div class="button">UPDATE</div>
+            <div class="button" data-ng-show="$state.includes('cows')" data-ng-click="match()">MATCH</div>
+            <div class="button send-btn" id="send" data-ng-click="showOptions=!showOptions"> <!--data-ng-click="sendEmail()"-->SEND TO
+                <div class="footer-option-container" data-ng-show="showOptions">
+                    <div id="ftr-opt-mail" class="footer-option">EMAIL</div>
+                    <div id="ftr-opt-print" class="footer-option">PRINT</div>
+                    <div id="ftr-opt-sms" class="footer-option">SMS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

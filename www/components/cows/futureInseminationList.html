@@ -1,0 +1,13 @@
+<div class="set1-conrainer">
+    <div class="border">
+        <div id="tag-wrapper-cows"></div>
+        <input class="ins-list" type="text" id="txtcownum" name="txtcownum" placeholder=" Write out cow SA number for insemination" required pattern="[0-9][0-9 ]{1,}" ng-keypress="validate($event); searchKeyPress($event)" ng-keydown="searchKeyPress($event)" />
+    </div>
+
+    <div class="select">
+        <label class="ins-number">{{counter}} </label><label>cows</label><br>
+        <label id="selected">Selected for insemination!</label>
+    </div>
+    <button class="btn-save" type="button" id="create" data-ng-click="creat()">Create Insemination List</button>
+
+</div>

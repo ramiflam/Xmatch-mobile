@@ -293,6 +293,13 @@ body {
     background-size: 20px,10px;
 }
 
+#navbar-container #tank {
+    background-image: url(img/tank.png), url("img/arrow.png");
+    background-position: 10px, 196px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px,10px;
+}
+
 #navbar-container #genetic {
     background-image: url("img/x_icon.png");
     background-position: 13px;
@@ -636,8 +643,9 @@ section.header {
     height: -o-calc(100% - 55px);
      Standard 
     height: calc(100% - 55px);*/
-    padding-top: 55px;
+    /* padding-top: 45px; */
     height: 100%;
+    /* width: 100%; */
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -657,44 +665,53 @@ section.header {
 }
 
 .main-lobby .td {
-    /*width: 50%;*/
-    width: 49%;
+    width: 48%;
     height: 100%;
     text-align: center;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 90px;
+    background-size: 70px;
     font-size: 10px;
     position: relative;
     display: inline-block;
 }
 
+.main-lobby .center .td {
+    width: 100%;
+}
+
 .main-lobby .tr {
     height: 100%;
-    width: 49%;
+    width: 39%;
+    display: inline-block;
+}
+
+.main-lobby .tr.center {
+    height: 100%;
+    width: 20%;
     display: inline-block;
 }
 
 .main-lobby .td span {
     position: absolute;
-    bottom: 18px;
+    bottom: 25px;
     left: 0;
     width: 100%;
 }
 
 @media all and (max-width: 400px) {
     .main-lobby .table {
-        width: 225px;
-        height: 260px;
+        width: 277px;
+        height: 255px;
         /*width: 450px;
         height: 130px;*/
         position: absolute;
-        margin: auto;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
         color: #fff;
+        margin: auto;
     }
 
     .main-lobby .td {
@@ -704,7 +721,7 @@ section.header {
         text-align: center;
         background-position: top;
         background-repeat: no-repeat;
-        background-size: 90px;
+        background-size: 80px;
         font-size: 10px;
         position: relative;
         display: inline-block;
@@ -712,8 +729,30 @@ section.header {
 
     .main-lobby .tr {
         height: 100%;
-        width: 49%;
+        width: 36%;
         display: inline-block;
+    }
+
+    .main-lobby .tr.left {
+        left: 0;
+        position: absolute;
+    }
+
+    .main-lobby .tr.right {
+        right: 0;
+        position: absolute;
+    }
+
+    .main-lobby .tr.center {
+        position: absolute;
+        left: 90px;
+        top: 68px;
+        height: 50%;
+        width: 35%;
+    }
+
+    .main-lobby .tr.center .td {
+        height: 100%;
     }
 }
 
@@ -731,6 +770,10 @@ section.header {
 
 #main-set {
     background-image: url("img/settings.png");
+}
+
+#main-tank {
+    background-image: url("img/tank.png");
 }
 
 /***********************    BULLS    ********************************/
@@ -811,6 +854,10 @@ section.header {
 
 #navbar-container #settings.up {
     background-image: url(img/settings.png), url("img/arrow_up.png");
+}
+
+#navbar-container #tank.up {
+    background-image: url(img/tank.png), url("img/arrow_up.png");
 }
 
 .up {
@@ -1593,11 +1640,12 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
     .main-subheader p:first-child {
     }
 
-    .main-lobby {
+    .main-lobby .tr {
+        width: 39%;
     }
 
     .main-lobby .table {
-        width: 600px;
+        width: 750px;
         height: 167px;
     }
 
@@ -1606,10 +1654,16 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
         font-size: 17px;
     }
 
-    .main-lobby .tr {
+    .main-lobby .tr.center {
+        width: 20%;
     }
 
-    .main-lobby .td span {
+    .main-lobby .center .td {
+        width: 100%;
+    }
+
+    .main-lobby span {
+        bottom: 10px!important;
     }
 
 
@@ -1924,7 +1978,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 
     tr td input {
         overflow: hidden;
-          width: 100%;
+        width: 100%;
     }
 
     .checkbox-lable {
@@ -1949,7 +2003,7 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
     }
 
     tr td input[type=date] {
-      width: 100%;
+        width: 100%;
     }
 
     .slider-data-wrapper {

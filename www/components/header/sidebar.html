@@ -13,5 +13,8 @@
         <li class="field" id="prefered" data-ng-click="moveTo('PreferedCharacteristics')" data-ng-show="settingsClicked"><span>Prefered characteristics</span></li>
         <li class="field" id="prefered" data-ng-click="moveTo('bullsMatchSettings')" data-ng-show="settingsClicked"><span>General bulls matching settings</span></li>
         <li class="field" id="prefered" data-ng-click="moveTo('farmSettings')" data-ng-show="settingsClicked"><span>General farm settings</span></li>
+        <li class="field nav" id="tank" data-ng-click="tankClicked=!tankClicked"  ng-class="tankClicked ?'up':''"><span>Stock Management</span></li>
+        <li class="field" id="prefered" data-ng-click="moveTo('tank')" data-ng-show="tankClicked"><span></span></li>
+        <li class="field" id="prefered" data-ng-click="moveTo('tank')" data-ng-show="tankClicked"><span></span></li>
     </ul>
 </nav>

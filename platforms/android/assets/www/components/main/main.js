@@ -13,4 +13,7 @@ xmatchApp.controller('main', ['$scope', '$state', '$rootScope', function ($scope
     $scope.enterDaily = function () {
         $state.transitionTo('inseminationList');
     }
+    $scope.enterTank = function () {
+        $state.transitionTo('tank');
+    }
 } ]);

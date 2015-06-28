@@ -113,6 +113,15 @@ xmatchApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: "details"
                 }
             }
+        })
+        .state("tank", {
+            url: "/tank",
+            views: {
+                "main": {
+                    templateUrl: "./components/tank/tank.html",
+                    controller: "tank"
+                }
+            }
         });
     //.state("ManualImport", {
     //    url: "/ManualImport",
@@ -138,34 +147,7 @@ xmatchApp.directive('sidebar', ['$state', '$timeout', function ($state, $timeout
             });
             scope.moveTo = function (stat) {
                 scope.openSideBar();
-                switch (stat) {
-                    case "bulls":
-                        scope.$state.transitionTo('bulls');
-                        break;
-                    case "cows":
-                        scope.$state.transitionTo('cows');
-                        break;
-                    case "geneticPlan":
-                        scope.$state.transitionTo('geneticPlan');
-                        break;
-                    case "PreferedCharacteristics":
-                        scope.$state.transitionTo('PreferedCharacteristics');
-                        break;
-                    case "bullsMatchSettings":
-                        scope.$state.transitionTo('bullsMatchSettings');
-                        break;
-                    case "farmSettings":
-                        scope.$state.transitionTo('farmSettings');
-                        break;
-                    case "inseminationList":
-                        scope.$state.transitionTo('inseminationList');
-                        break;
-                    case "futureInseminationList":
-                        scope.$state.transitionTo('futureInseminationList');
-                        break;
-                    default:
-                        return;
-                }
+                scope.$state.transitionTo(stat);
             }
         }
     }
